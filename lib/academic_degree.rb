@@ -4,7 +4,7 @@ require 'academic_degree/config'
 module AcademicDegree
   include Config
 
-  def full_list
-    YamlLoader.yaml_object('ru/ussr.academic_degrees')
+  def degree_list(system, language)
+    YamlLoader.yaml_object("#{language}/#{system}.academic_degrees")[:list]
   end
 end
