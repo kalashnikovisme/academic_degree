@@ -6,14 +6,17 @@ require 'academic_degree/version'
 Gem::Specification.new do |spec|
   spec.name          = "academic_degree"
   spec.version       = AcademicDegree::VERSION
-  spec.authors       = ["pavel"]
+  spec.authors       = ["Pavel Kalashnikov"]
   spec.email         = ["kalashnikovisme@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Academic Degrees of all systems and on many languages.}
+  spec.description   = %q{Academic Degree has all academic degrees of all systems and on many languages (for version 1.0.0)}
+  spec.homepage      = "https://github.com/kalashnikovisme/academic_degree"
   spec.license       = "MIT"
+  spec.required_ruby_version = '>= 2.0.0'
+  spec.metadata = { "issue_tracker" => "https://github.com/kalashnikovisme/academic_degree/issues" }
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = `git ls-files`.split("\n")
+  spec.post_install_message = "See documentation of Academic_Degree on https://github.com/kalashnikovisme/academic_degree."
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
